@@ -1,0 +1,15 @@
+<h2>Post Details</h2>
+<div *ngIf="post">
+  <h3>{{ post.title }}</h3>
+  <p>{{ post.body }}</p>
+  <h4>Comments</h4>
+  <ul>
+    <li *ngFor="let comment of comments">
+      <h5>{{ comment.name }} ({{ comment.email }})</h5>
+      <p>{{ comment.body }}</p>
+    </li>
+  </ul>
+  <div class="text-center">
+    <a class="btn btn-primary" [routerLink]="['/']"> Back to posts list </a>
+  </div>
+</div>
